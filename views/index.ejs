@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zuri CRUD</title>
+</head>
+
+<body>
+    <form action="/user-data" method="POST">
+        <input type="text" placeholder="name" name="Name">
+        <input type="text" placeholder="Email" name="email">
+        <input type="text" placeholder="Country" name="country">
+        <button type="submit">Submit</button>
+    </form>
+    <h2> User Data </h2>
+    
+    <script src="/main.js"></script>
+    <ul class="user-data">
+        <!-- Loop through info -->
+        <% for(var i = 0; i < info.length; i++) {%>
+        <li class="user-info"> 
+            <!-- Output name from the iterated object -->
+            <span><%= info[i].Name %></span>:
+            <!-- Output email from the iterated  object -->
+            <span><%= info[i].email %></span>:
+            <!-- Output country from the iterated  object -->
+            <span><%= info[i].country %></span> 
+    <button id="update-button">Replace User info</button>
+    <button id="delete-button">Delete User info</button>
+    </li>
+    <%  } %>
+    </ul>
+
+</body>
+
+</html>
