@@ -1,50 +1,52 @@
-
-
-
+const port = 3000;
 
 
 const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-
 const app = express();
 
-var corsOptions = {
-  origin: "http://localhost:8081",
-};
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const  mongoose   = require("mongoose");
+app.use(express.json)
+const username = "zuri_data";
+const password = "EmmAnUEl";
+const connectionString = `mongodb+srv://${username}:${password}@cluster0.e7kyq.mongodb.net/user_data?retryWrites=true&w=majority`;
 
-app.use(cors(corsOptions));
+mongoose.connect(connectionString, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
 
-// parse requests of content-type - application/json
-app.use(bodyParser.json());
-
-// parse requests of content-type - application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
-});
-
-// set port, listen for requests
-
-require("./routes/data.routes")(app);
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
-});
+}, (err) => {
+  if (err) {
+    console.log(err)
+  } else {
+    console.log(' db connection succesful')
+  }
+  
+})
 
 
-const db = require("./models");
-db.mongoose
-  .connect(db.url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
-  .then(() => {
-    console.log("Connected to the database!");
-  })
-  .catch(err => {
-    console.log("Cannot connect to the database!", err);
-    process.exit();
-  });
+const userschema = new mongoose.Schema({
+  firstname: String,
+  lastname: String,
+  country: String,
+  email:String,
+
+})
+
+const Book = mongoose.model('User',userschema)
+
+
+// POST request to add new data
+
+app.post('/user-data', (req,res) => {
+  const user = req.body.data;
+  console.log(book)
+}
+    
+
+)
+
+
+app.listen(port,()=> console.log(`app listening on port ${port}`))
