@@ -1,6 +1,5 @@
 
 const express = require("express");
-const router = express();
 const router = express.Router();
 
 
@@ -94,3 +93,5 @@ router.delete("/user-data/:id", (req, res) => {
         })
        
     });
+
+module.exports = router;
