@@ -3,7 +3,15 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/userSchema");
 
+router.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
+
+});
+
 // POST request to add new data
+
+
+
 
 router.post(
   "/user-data",
