@@ -7,7 +7,6 @@ const routes = require('./routes/dataRoutes')
 const dbSetup = require('./database/setup')
 const User = require('./models/userSchema');
 
-const mongoose = require('mongoose')
 
 // Setup Schema
 // SETUP MONGOOSE
