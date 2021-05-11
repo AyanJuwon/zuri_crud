@@ -38,7 +38,7 @@ exports.fetchSingleData = (req, res) => {
     } else if (!userData) {
       return res.status(404).json({ message: "Data not found" });
     } else {
-      return res.status(200).json({ userData });
+      return res.status(200).json({message:"Retrieved all data", userData });
     }
   });
 };
@@ -51,7 +51,7 @@ exports.fetchAllData = (req, res) => {
     } else if (!userData) {
       return res.status(404).json({ message: "Data not found" });
     } else {
-      return res.status(200).json({ userData });
+      return res.status(200).json({ message:"Data found" ,userData });
     }
   });
 };
