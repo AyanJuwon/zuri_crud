@@ -5,12 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./bin/www"
+    "start": "node server.js"
   },
-  "keywords": [
-    "example",
-    "heroku"
-  ],
   "author": "Ayanniran Oluwajuwon",
   "license": "ISC",
   "dependencies": {
@@ -23,8 +19,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
-  },
-  "engines": {
-    "node": "14.x"
   }
+  
 }
