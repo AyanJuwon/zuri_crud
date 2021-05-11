@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./bin/www"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "Ayanniran Oluwajuwon",
   "license": "ISC",
   "dependencies": {
@@ -15,9 +19,12 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mongodb": "^3.6.6",
-    "mongoose": "^5.12.7"
+    "mongoose": "^5.12.8"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
