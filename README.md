@@ -1,4 +1,4 @@
-# zuri_crud
+Lo# zuri_crud
 Api link : https://secret-escarpment-70929.herokuapp.com
 
 *Show Data**
@@ -77,8 +77,9 @@ Adds new json data about a single user.
 
 -------------------------------------------
 * **Method:**
-
-  `PUT`
+   
+    `PUT`
+  
   --------
 Edits json data about a single user.
 
@@ -104,7 +105,7 @@ Edits json data about a single user.
     $.ajax({
       url: "https://secret-escarpment-70929.herokuapp.com/user-data/"
       dataType: "json",
-      type : "POST",
+      type : "PUT",
       success : function(r) {
         console.log(r);
       }
@@ -140,7 +141,7 @@ Deletes  json data about a single user.
     $.ajax({
       url: "https://secret-escarpment-70929.herokuapp.com/user-data/"
       dataType: "json",
-      type : "POST",
+      type : "DELETE ",
       success : function(r) {
         console.log(r);
       }
