@@ -49,10 +49,6 @@ Api link : https://secret-escarpment-70929.herokuapp.com
 * **Method:**
 
   `POST`
-  
-
-
-
 
 * **Success Response:**
 
@@ -76,4 +72,74 @@ Api link : https://secret-escarpment-70929.herokuapp.com
       }
     });
   ```
+
+
+* **Method:**
+
+  `PUT`
+  
+
+*  **URL Params**
+
+   **Required:**
+ 
+   `id=[String]`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `{ message:"Data updated successfully" }
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND 
+    **Content:** `{ error : "Data not saved" }`
+
+  
+* **Sample Call:**
+
+  ```javascript
+    $.ajax({
+      url: "https://secret-escarpment-70929.herokuapp.com/user-data/"
+      dataType: "json",
+      type : "POST",
+      success : function(r) {
+        console.log(r);
+      }
+    });
+  ```
+
+* **Method:**
+
+  `DELETE`
+  
+
+*  **URL Params**
+
+   **Required:**
+ 
+   `id=[String]`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `{ message:"Data deleted  successfully" }
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND 
+    **Content:** `{ error : "Data not found " }`
+
+  
+* **Sample Call:**
+
+  ```javascript
+    $.ajax({
+      url: "https://secret-escarpment-70929.herokuapp.com/user-data/"
+      dataType: "json",
+      type : "POST",
+      success : function(r) {
+        console.log(r);
+      }
+    });
+  ```
+
 
