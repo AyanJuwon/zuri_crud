@@ -49,6 +49,8 @@ Api link : https://secret-escarpment-70929.herokuapp.com
 * **Method:**
 
   `POST`
+--------
+Adds new json data about a single user.
 
 * **Success Response:**
 
@@ -77,7 +79,8 @@ Api link : https://secret-escarpment-70929.herokuapp.com
 * **Method:**
 
   `PUT`
-  
+  --------
+Edits json data about a single user.
 
 *  **URL Params**
 
@@ -112,7 +115,9 @@ Api link : https://secret-escarpment-70929.herokuapp.com
 
   `DELETE`
   
+--------
 
+Deletes  json data about a single user.
 *  **URL Params**
 
    **Required:**
