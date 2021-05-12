@@ -44,7 +44,7 @@ Api link : https://secret-escarpment-70929.herokuapp.com
       }
     });
   ```
-
+---------------------------------------------
 
 * **Method:**
 
@@ -75,7 +75,7 @@ Adds new json data about a single user.
     });
   ```
 
-
+-------------------------------------------
 * **Method:**
 
   `PUT`
@@ -110,7 +110,7 @@ Edits json data about a single user.
       }
     });
   ```
-
+----------------------------------------------
 * **Method:**
 
   `DELETE`
