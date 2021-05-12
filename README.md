@@ -44,3 +44,36 @@ Api link : https://secret-escarpment-70929.herokuapp.com
       }
     });
   ```
+
+
+* **Method:**
+
+  `POST`
+  
+
+
+
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `{ message:"Data saved successfully" }
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND 
+    **Content:** `{ error : "Data not saved" }`
+
+  O
+* **Sample Call:**
+
+  ```javascript
+    $.ajax({
+      url: "https://secret-escarpment-70929.herokuapp.com/user-data/"
+      dataType: "json",
+      type : "POST",
+      success : function(r) {
+        console.log(r);
+      }
+    });
+  ```
+
