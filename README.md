@@ -7,7 +7,7 @@ Api link : https://secret-escarpment-70929.herokuapp.com
 
 * **URL**
 
-      https://secret-escarpment-70929.herokuapp.com/
+      https://secret-escarpment-70929.herokuapp.com/user-data/:id
 
 * **Method:**
 
@@ -36,7 +36,7 @@ Api link : https://secret-escarpment-70929.herokuapp.com
 
   ```javascript
     $.ajax({
-      url: "https://secret-escarpment-70929.herokuapp.com"
+      url: "https://secret-escarpment-70929.herokuapp.com/user-data/:id"
       dataType: "json",
       type : "GET",
       success : function(r) {
